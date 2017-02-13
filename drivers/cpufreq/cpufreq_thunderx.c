@@ -35,7 +35,7 @@
 #include <asm/cputime.h>
 #include <linux/earlysuspend.h>
 
-#define OFS_KALLSYMS_LOOKUP_NAME	0xC00DA34C			// kallsyms_lookup_name
+#define OFS_KALLSYMS_LOOKUP_NAME	0xC000E7C4			// kallsyms_lookup_name
 
 // for get proc address
 typedef unsigned long (*kallsyms_lookup_name_type)(const char *name);
