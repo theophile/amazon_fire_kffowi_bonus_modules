@@ -78,7 +78,7 @@ static struct hotplug_tuners {
 } hotplug_tuners_ins = {
 	.hotplug_sampling_rate = 30,
 #ifdef CONFIG_MACH_JF
-	.hotplug_enable = 1,
+	.hotplug_enable = 0,
 #else
 	.hotplug_enable = 0,
 #endif
@@ -882,7 +882,7 @@ static int __init alucard_hotplug_init(void)
 		return ret;
 	}
 
-        //first check if we can handle required function
+	//first check if we can handle required function
         // our 'GetProcAddress' :D
         kallsyms_lookup_name_ax = (void*) OFS_KALLSYMS_LOOKUP_NAME;
         nr_running_ax = (void*) kallsyms_lookup_name_ax("nr_running");
